@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MUI Landing Page Example</title>
+
+   <!-- Load MUI CSS -->
+   <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+   <!-- Load MUI JavaScript -->
+   <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+   <!-- Link to your external stylesheet -->
+   <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+
+<body>
+  <header class="mui-appbar mui--z1">
+    <!-- Appbar HTML goes here -->
+  </header>
+
+  <div id="content-wrapper" class="mui--text-center">
+    <div class="mui-panel">
+      <h1>ZocialBlendR</h1>
+      <div class="container">
+        <input id="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
+          <label><input type="checkbox" id="youtubeCheckbox"> YouTube</label>
+          <label><input type="checkbox" id="bothCheckbox"> Both</label>
+        </div>
+        <button class="mui-btn mui-btn--primary mui-btn--raised" onclick="executeSearch()">Search</button>
+      </div>
+      <div id="root"></div>
+      <script src="assets/script.js"></script>
+    </div>
+  </div>
+
+  <footer>
+    <div class="mui-container mui--text-center">
+      Made with ♥ by Group 4 using <a href="https://www.muicss.com">MUICSS</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
