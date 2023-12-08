@@ -1,0 +1,104 @@
+/**
+ * Body CSS
+ */
+ /* html, */
+ body {
+   height: 100%;
+   margin: 0;
+   /*TO DO .. Play with this body style until the header is below */
+   padding: 20px; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+
+}
+ 
+ h1 {
+  color:o#ff4500;
+  font-family: 'Comic Neue', 'Comic Sans MS',  sans-serif;
+
+ }
+ /**
+  * Header CSS
+  */
+  header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 2;
+ }
+ 
+.mui-appbar {
+    background-color: #4db6ac;
+ }
+ header ul.mui-list--inline {
+   margin-bottom: 0;
+ }
+ 
+ header a {
+   color: white;
+ }
+ 
+ header table {
+   width: 100%;
+ }
+ 
+ /**
+  * Content CSS
+  */
+ #content-wrapper {
+   min-height: 100%;
+   /* sticky footer */
+   box-sizing: border-box;
+   margin-bottom: -100px;
+   padding-bottom: 100px;
+ }
+ 
+ /**
+  * Footer CSS
+  */
+     /*TO DO .. investigate this footer until the footer is below body */
+
+ footer {
+   /* height: 100px; */
+   background-color: #eee;
+   border-top: 1px solid #e0e0e0;
+   padding-top: 35px;
+   max-width: max-content;
+   position: fixed;
+   z-index: 2;
+ }
+ 
+ /**
+  * Your Landing Page CSS
+  */
+ .container {
+   text-align: center;
+ }
+ 
+ .search-input {
+   width: 300px;
+   padding: 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .checkbox-group {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px; /* Increase the space between the checkboxes and the button */
+ }
+ 
+ .checkbox-group label {
+   margin: 0 10px;
+ }
+ 
+ .mui-btn {
+   margin-top: 200px; /* Add margin to the top of the button */
+   background-color:#ff4500
+ }
+ 
+ .mui-btn--primary {
+    background-color: #ff4500;
+ }
