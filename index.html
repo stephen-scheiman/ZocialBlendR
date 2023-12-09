@@ -5,46 +5,56 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MUI Landing Page Example</title>
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/gif" href="assets/favicon/">
+  <title>ZocialBlendR</title>
 
-   <!-- Load MUI CSS -->
+  <!-- MUI JavaScript --> 
+   <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+   <!-- external stylesheet -->
+   <link rel="stylesheet" type="text/css" href="assets/styles.css">
+   <!-- MUI CSS -->
    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+   <!-- Material Icons-->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <!-- Google Fonts -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
-   <!-- Load MUI JavaScript -->
-   <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-   <!-- Link to your external stylesheet -->
-   <link rel="stylesheet" type="text/css" href="assets/styles.css">
+   
 </head>
 
 <body>
+  <main>
   <header class="mui-appbar mui--z1">
-    <!-- Appbar HTML goes here -->
+    <!-- Appbar HTML -->
+    <i class="material-icons material-icon large-icon">home</i>
   </header>
 
   <div id="content-wrapper" class="mui--text-center">
     <div class="mui-panel">
-      <h1>ZocialBlendR</h1>
       <div class="container">
+        <h2>Search By Your Interest </h2>
         <input id="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
         <div class="checkbox-group">
           <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
+          <i class="material-icons material-icon reddit-icon">reddit</i>
+
           <label><input type="checkbox" id="youtubeCheckbox"> YouTube</label>
+          <i class="material-icons material-icon youtube-icon">smart_display</i>
+
           <label><input type="checkbox" id="bothCheckbox"> Both</label>
+          <i class="material-icons material-icon reddit-icon">reddit</i><i class="material-icons material-icon youtube-icon">smart_display</i>
         </div>
         <button class="mui-btn mui-btn--primary mui-btn--raised" onclick="executeSearch()">Search</button>
       </div>
       <div id="root"></div>
-      <script src="assets/script.js"></script>
+      <script src="assets/js/script.js"></script>
     </div>
   </div>
-
   <footer>
-    <div class="mui-container mui--text-center">
-      Made with ♥ by Group 4 using <a href="https://www.muicss.com">MUICSS</a>
+    <div class="footer mui-container mui--text-center">
+      Made with ♥ by Stephen S., Melissa W., Jonathan Campos using <a href="https://www.muicss.com">MUICSS</a>
     </div>
   </footer>
-
+</main>
 </body>
-
 </html>
