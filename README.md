@@ -1,38 +1,48 @@
-# zocialBlendr
+# Project: ZocialBlendR
+
+# ZocialBlendR
 
 # Decription 
-- Social Media Aggregator based on User Preferences 
-
-# Deployed URL 
-- <"Link to be inserted here"> 
+- Social Media Aggregator. Based on User Preferences 
 
 # User Story 
-As a user interested in diverse content,
-I want to use a web application that aggregates content,
-So that I can easily find and explore interesting posts and videos.
+As a user interested in diverse content.
+I want to use a web application that aggregates content that faciliates and explores interesting posts and videos.
 
-# Acceptance Criterias  
+# Accptacance Criteria 
+Given a user on the application homepage,
+When the user inputs their interests,
+Then the application should fetch and display popular Reddit posts related to the user's interests:
+
 - Given a user on the application homepage,
 - When the user inputs their interests,
-- Then the application should fetch and display popular Reddit posts related to the user's interests.
+- Then the application should fetch and display relevant YouTube videos   matching the user's interests.
+- Given displayed content from both Reddit and YouTube,
+- When the user interacts with a post or video,
 
-# Video Demo 
-- "GIF link to be inserted here"
-  
 # Technologies used: 
 - Google Slides
-- Gitlab and Gitlab Project
-- Vs Code
-- HTML
-- JavaScript
+- Vs Code, HTML
 - CSS (Material UI) 
+- API #1
+- API #2
 
-# General Breakdown of Team/Project Task Distribution: 
-- Lead on Front End (HTML, CSS, JS) = Melissa
-- Lead on Back End Configuration API (JS) = Stephen 
-- Lead on Quality Assurance (Proj.Mgt) = Jonathan Campos 
+# Breakdown of Tasks: 
+Melissa Wright: Front End (HTML, CSS,JS)
+Stephen Scheineman: Backend API fetch/response
+Jonathan Campos: Quality assurance
+
+# Challenges
+Initial group composition changed. Level of Engagement/Participation varied from each member of the team. 
+
+# Breakdown of Tasks: 
+Creating main repository.
+Creating project board.
+Importing APIs
+Importing CSS/Material UI.
+Delegate responsibilities to three team members.
 
 # Challenges
 - Initial group composition changed
-- TBD .. 
+- Level of Engagement/Participation varied from each member of the team
 
