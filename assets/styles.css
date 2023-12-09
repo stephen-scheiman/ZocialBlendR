@@ -1,22 +1,23 @@
 /**
  * Body CSS
  */
- /* html, */
+ 
  body {
    height: 100%;
    margin: 0;
-   /*TO DO .. Play with this body style until the header is below */
-   padding: 20px; 
+   padding: 20%; 
    display: flex;
    align-items: center;
    justify-content: center;
    font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+   background-color: rgba(228, 211, 194, 0.496) !important;
 
 }
  
- h1 {
-  color:o#ff4500;
+ h2 {
+  color: #ff4500 !important;;
   font-family: 'Comic Neue', 'Comic Sans MS',  sans-serif;
+  font-weight:800;
 
  }
  /**
@@ -31,7 +32,7 @@
  }
  
 .mui-appbar {
-    background-color: #4db6ac;
+    background-color: #4db6ac !important;
  }
  header ul.mui-list--inline {
    margin-bottom: 0;
@@ -50,7 +51,6 @@
   */
  #content-wrapper {
    min-height: 100%;
-   /* sticky footer */
    box-sizing: border-box;
    margin-bottom: -100px;
    padding-bottom: 100px;
@@ -59,20 +59,18 @@
  /**
   * Footer CSS
   */
-     /*TO DO .. investigate this footer until the footer is below body */
-
- footer {
-   /* height: 100px; */
-   background-color: #eee;
-   border-top: 1px solid #e0e0e0;
-   padding-top: 35px;
-   max-width: max-content;
-   position: fixed;
-   z-index: 2;
- }
+footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      height:30px;
+      left: 0;
+      z-index: 2;
+      background-color: rgb(168, 150, 150);
+}
  
  /**
-  * Your Landing Page CSS
+  * Landing Page CSS
   */
  .container {
    text-align: center;
@@ -87,18 +85,36 @@
  .checkbox-group {
    display: flex;
    justify-content: center;
-   margin-bottom: 20px; /* Increase the space between the checkboxes and the button */
+   margin-bottom: 20px; /* Increases the space between the checkboxes and the button */
  }
  
  .checkbox-group label {
    margin: 0 10px;
  }
- 
+
+ .large-icon.material-icon {
+  font-size: 4em;
+}
+.youtube-icon.material-icon {
+  color:red;
+  font-size: medium;
+}
+.reddit-icon.material-icon {
+  margin-right: 5px;
+  font-size: medium;
+  color:#ff4500;
+}
+ .material-icon {
+  margin-right: 5px;
+  font-size: medium;
+  color: white;
+}
+
  .mui-btn {
-   margin-top: 200px; /* Add margin to the top of the button */
-   background-color:#ff4500
+   margin-top: 30px; /* Add margin to the top of the button */
+   background-color:#ff4500 !important;
  }
  
  .mui-btn--primary {
-    background-color: #ff4500;
- }
+    background-color: #ff4500 !important;
+}
