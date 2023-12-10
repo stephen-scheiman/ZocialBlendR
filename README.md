@@ -1,4 +1,4 @@
-# Project: ZocialBlendR
+# Project: Interactive Website using 2 APIs 
 
 # ZocialBlendR
 
@@ -23,14 +23,15 @@ Then the application should fetch and display popular Reddit posts related to th
 # Technologies used: 
 - Google Slides
 - Vs Code, HTML
-- CSS (Material UI) 
-- API #1
-- API #2
+- CSS Library used: Material UI https://mui.com/
+- API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
+- API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
+](https://www.youtube.com/yt/dev/api-resources.html)
 
 # Breakdown of Tasks: 
-Melissa Wright: Front End (HTML, CSS,JS)
-Stephen Scheineman: Backend API fetch/response
-Jonathan Campos: Quality assurance
+Melissa Wright: Front End Lead: Working with Style and Landing Page
+Stephen Scheineman: Backend Lead: Working with API fetch/response
+Jonathan Campos: Quality Assurance Lead: Testing & User Feedback
 
 # Challenges
 Initial group composition changed. Level of Engagement/Participation varied from each member of the team. 
@@ -45,4 +46,8 @@ Delegate responsibilities to three team members.
 # Challenges
 - Initial group composition changed
 - Level of Engagement/Participation varied from each member of the team
+
+# Resources Links and Credits 
+- https://stackoverflow.com/questions/32523353/using-material-ui-in-html-development#:~:text=you%20will%20need%20to%20add%20material.css%20and%20ripple.css,file%20for%20js%20file%20material.js%20material.min.js%20and%20ripples.min.js
+- https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response
 
