@@ -1,29 +1,34 @@
+$("#searchButton").on("click", executeSearch);
+
 // Function to execute the search
 function executeSearch() {
   // Get the user input
-  var userInput = document.getElementById("searchInput").value;
-
+  var userInput = $('input[name="searchInput"]').val();
   // Get the state of the checkboxes
   var redditCheckbox = document.getElementById("redditCheckbox").checked;
   var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;
   var bothCheckbox = document.getElementById("bothCheckbox").checked;
 
-  // Construct the search query based on the checkboxes
+  // Decide which API to query based on checkbox selections
   var searchQuery = userInput;
   if (redditCheckbox && !youtubeCheckbox && !bothCheckbox) {
-    searchQuery += " ";
+    //Call the Reddit API
+    redditSearch(userInput);
   } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
-    searchQuery += " ";
+    //Call the YouTube API
+    videoSearch(API_KEY, searchQuery, 20);
   } else if (bothCheckbox) {
-    searchQuery += " ";
+    //Call both APIs
+    redditSearch(userInput);
+    videoSearch(API_KEY, searchQuery, 20);
+  } else {
+    //C'mon man.
+    alert("Pick one, don't be difficult");
   }
-
-  // Perform the API call
-  videoSearch(API_KEY, searchQuery, 20);
 }
 
 // YouTube Data API key
-const API_KEY = 'AIzaSyAAFHr-ZGnlwk-w39q6JLAbKLkAwkEQdUg';
+const API_KEY = "AIzaSyAAFHr-ZGnlwk-w39q6JLAbKLkAwkEQdUg";
 
 // Function to perform the YouTube API search
 function videoSearch(API_KEY, userInput, maxResults) {
@@ -36,11 +41,11 @@ function videoSearch(API_KEY, userInput, maxResults) {
       displayResults(data.items);
     })
     .catch((error) => {
-      console.error('Error executing search:', error);
+      console.error("Error executing search:", error);
     });
 }
 
-// Function to display search results  
+// Function to display search results
 function displayResults(items) {
   var rootDiv = document.getElementById("root");
   rootDiv.innerHTML = ""; // Clear previous results
@@ -52,4 +57,22 @@ function displayResults(items) {
     `;
     rootDiv.appendChild(videoDiv);
   });
+}
+// Function to perform the Reddit API search
+function redditSearch(userInput) {
+  const redditSearchURL = "https://www.reddit.com/search.json?q=" + userInput;
+  fetch(redditSearchURL)
+    .then(function (response) {
+    //Parse the response
+      return response.json();
+    })
+    .then(function (data) {
+      //Write the top 25 results to the console for now
+      console.log("Fetch Response \n-------------");
+      for (i = 0; i <= 24; i++) {
+        console.log(
+          "https://reddit.com" + data.data.children[i].data.permalink
+        );
+      }
+    });
 }
