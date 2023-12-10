@@ -1,8 +1,9 @@
+// Get the user input
+$("#searchButton").on("click", executeSearch);
+
 // Function to execute the search
 function executeSearch() {
-  // Get the user input
-  var userInput = document.getElementById("searchInput").value;
-
+  var userInput = $('input[name="searchInput"]').val();
   // Get the state of the checkboxes
   var redditCheckbox = document.getElementById("redditCheckbox").checked;
   var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;
@@ -20,10 +21,11 @@ function executeSearch() {
 
   // Perform the API call
   videoSearch(API_KEY, searchQuery, 20);
+  redditSearch(userInput);
 }
 
 // YouTube Data API key
-const API_KEY = 'AIzaSyAAFHr-ZGnlwk-w39q6JLAbKLkAwkEQdUg';
+const API_KEY = "AIzaSyAAFHr-ZGnlwk-w39q6JLAbKLkAwkEQdUg";
 
 // Function to perform the YouTube API search
 function videoSearch(API_KEY, userInput, maxResults) {
@@ -36,11 +38,11 @@ function videoSearch(API_KEY, userInput, maxResults) {
       displayResults(data.items);
     })
     .catch((error) => {
-      console.error('Error executing search:', error);
+      console.error("Error executing search:", error);
     });
 }
 
-// Function to display search results  
+// Function to display search results
 function displayResults(items) {
   var rootDiv = document.getElementById("root");
   rootDiv.innerHTML = ""; // Clear previous results
@@ -53,16 +55,21 @@ function displayResults(items) {
     rootDiv.appendChild(videoDiv);
   });
 }
-
-const redditSearchURL = "https://www.reddit.com/search.json?q=dogs";
-
-fetch(redditSearchURL)
-  .then(function (response) {
-    // In order to use the data, it must first be parsed. Use .json() when the
-    // API response format is JSON.
-    return response.json();
-  })
-  .then(function (data) {
-    console.log('Fetch Response \n-------------');
-    console.log(data);
-  });
+// Function to perform the Reddit API search
+function redditSearch(userInput) {
+  const redditSearchURL = "https://www.reddit.com/search.json?q=" + userInput;
+  fetch(redditSearchURL)
+    .then(function (response) {
+    //Parse the response
+      return response.json();
+    })
+    .then(function (data) {
+      //Write the top 25 results to the console for now
+      console.log("Fetch Response \n-------------");
+      for (i = 0; i <= 24; i++) {
+        console.log(
+          "https://reddit.com" + data.data.children[i].data.permalink
+        );
+      }
+    });
+}

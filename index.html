@@ -33,7 +33,7 @@
     <div class="mui-panel">
       <div class="container">
         <h2>Search By Your Interest </h2>
-        <input id="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
+        <input id="searchInput" name="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
         <div class="checkbox-group">
           <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
           <i class="material-icons material-icon reddit-icon">reddit</i>
@@ -44,10 +44,10 @@
           <label><input type="checkbox" id="bothCheckbox"> Both</label>
           <i class="material-icons material-icon reddit-icon">reddit</i><i class="material-icons material-icon youtube-icon">smart_display</i>
         </div>
-        <button class="mui-btn mui-btn--primary mui-btn--raised" onclick="executeSearch()">Search</button>
+        <button class="mui-btn mui-btn--primary mui-btn--raised" id="searchButton">Search</button>
       </div>
       <div id="root"></div>
-      <-- jquery -->
+      <!-- jquery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="assets/js/script.js"></script>
     </div>
