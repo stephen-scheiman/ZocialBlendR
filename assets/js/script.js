@@ -1,27 +1,24 @@
-// Get the user input
 $("#searchButton").on("click", executeSearch);
 
 // Function to execute the search
 function executeSearch() {
+  // Get the user input
   var userInput = $('input[name="searchInput"]').val();
   // Get the state of the checkboxes
   var redditCheckbox = document.getElementById("redditCheckbox").checked;
   var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;
   var bothCheckbox = document.getElementById("bothCheckbox").checked;
 
-  // Construct the search query based on the checkboxes
+  // Decide which API to query based on checkbox selections
   var searchQuery = userInput;
   if (redditCheckbox && !youtubeCheckbox && !bothCheckbox) {
-    searchQuery += " ";
+    redditSearch(userInput);
   } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
-    searchQuery += " ";
+    videoSearch(API_KEY, searchQuery, 20);
   } else if (bothCheckbox) {
-    searchQuery += " ";
+    redditSearch(userInput);
+    videoSearch(API_KEY, searchQuery, 20);
   }
-
-  // Perform the API call
-  videoSearch(API_KEY, searchQuery, 20);
-  redditSearch(userInput);
 }
 
 // YouTube Data API key
