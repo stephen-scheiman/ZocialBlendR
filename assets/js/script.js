@@ -15,8 +15,7 @@ function executeSearch() {
   } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
     searchQuery += " ";
   } else if (bothCheckbox) {
-    // You can customize this part based on your requirements
-    searchQuery += " site:reddit.com OR site:youtube.com";
+    searchQuery += " ";
   }
 
   // Perform the API call
