@@ -10,20 +10,23 @@ function executeSearch() {
   var bothCheckbox = document.getElementById("bothCheckbox").checked;
 
   // Decide which API to query based on checkbox selections
-  var searchQuery = userInput;
   if (redditCheckbox && !youtubeCheckbox && !bothCheckbox) {
     //Call the Reddit API
     redditSearch(userInput);
+    $('input[name="searchInput"]').val("");
   } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
     //Call the YouTube API
-    videoSearch(API_KEY, searchQuery, 20);
+    videoSearch(API_KEY, userInput, 20);
+    $('input[name="searchInput"]').val("");
   } else if (bothCheckbox) {
     //Call both APIs
     redditSearch(userInput);
-    videoSearch(API_KEY, searchQuery, 20);
+    videoSearch(API_KEY, userInput, 20);
+    $('input[name="searchInput"]').val("");
   } else {
     //C'mon man.
     alert("Pick one, don't be difficult");
+    $('input[name="searchInput"]').val("");
   }
 }
 
@@ -60,10 +63,11 @@ function displayResults(items) {
 }
 // Function to perform the Reddit API search
 function redditSearch(userInput) {
-  const redditSearchURL = "https://www.reddit.com/search.json?q=" + userInput;
+  const redditSearchURL =
+    "https://www.reddit.com/search.json?q=" + userInput + "&raw_json=1";
   fetch(redditSearchURL)
     .then(function (response) {
-    //Parse the response
+      //Parse the response
       return response.json();
     })
     .then(function (data) {
