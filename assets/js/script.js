@@ -1,36 +1,56 @@
-//   /**
-//    * Sample JavaScript code for youtube.search.list
-//    * See instructions for running APIs Explorer code samples locally:
-//    * https://developers.google.com/explorer-help/code-samples#javascript
-//    */ */}
+// Function to execute the search
+function executeSearch() {
+  // Get the user input
+  var userInput = document.getElementById("searchInput").value;
 
-  function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-        .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
+  // Get the state of the checkboxes
+  var redditCheckbox = document.getElementById("redditCheckbox").checked;
+  var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;
+  var bothCheckbox = document.getElementById("bothCheckbox").checked;
+
+  // Construct the search query based on the checkboxes
+  var searchQuery = userInput;
+  if (redditCheckbox && !youtubeCheckbox && !bothCheckbox) {
+    searchQuery += " ";
+  } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
+    searchQuery += " ";
+  } else if (bothCheckbox) {
+    // You can customize this part based on your requirements
+    searchQuery += " site:reddit.com OR site:youtube.com";
   }
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyDMmLoTuguWRLRnQjIA3wCQe7xtUNTPSiE");
-    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
-  // Make sure the client is loaded and sign-in is complete before calling this method.
-  function execute() {
-    return gapi.client.youtube.search.list({
-      "part": [
-        "snippet"
-      ],
-      "maxResults": 25,
-      "q": "surfing"
+
+  // Perform the API call
+  videoSearch(API_KEY, searchQuery, 20);
+}
+
+// YouTube Data API key
+const API_KEY = 'AIzaSyAAFHr-ZGnlwk-w39q6JLAbKLkAwkEQdUg';
+
+// Function to perform the YouTube API search
+function videoSearch(API_KEY, userInput, maxResults) {
+  fetch(
+    `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&q=${userInput}&type=video&maxResults=${maxResults}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      // Process the search results
+      displayResults(data.items);
     })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "304668282159-s4ptdiuegbvadd939rida6t5grkf8kup.apps.googleusercontent.com"});
+    .catch((error) => {
+      console.error('Error executing search:', error);
+    });
+}
+
+// Function to display search results  
+function displayResults(items) {
+  var rootDiv = document.getElementById("root");
+  rootDiv.innerHTML = ""; // Clear previous results
+
+  items.forEach((item) => {
+    var videoDiv = document.createElement("div");
+    videoDiv.innerHTML = `
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+    `;
+    rootDiv.appendChild(videoDiv);
   });
+}
