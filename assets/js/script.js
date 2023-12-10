@@ -18,6 +18,8 @@ function executeSearch() {
   } else if (bothCheckbox) {
     redditSearch(userInput);
     videoSearch(API_KEY, searchQuery, 20);
+  } else {
+    alert("Pick one, don't be difficult");
   }
 }
 
