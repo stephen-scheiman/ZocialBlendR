@@ -12,13 +12,17 @@ function executeSearch() {
   // Decide which API to query based on checkbox selections
   var searchQuery = userInput;
   if (redditCheckbox && !youtubeCheckbox && !bothCheckbox) {
+    //Call the Reddit API
     redditSearch(userInput);
   } else if (!redditCheckbox && youtubeCheckbox && !bothCheckbox) {
+    //Call the YouTube API
     videoSearch(API_KEY, searchQuery, 20);
   } else if (bothCheckbox) {
+    //Call both APIs
     redditSearch(userInput);
     videoSearch(API_KEY, searchQuery, 20);
   } else {
+    //C'mon man.
     alert("Pick one, don't be difficult");
   }
 }
