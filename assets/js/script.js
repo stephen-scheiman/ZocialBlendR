@@ -53,3 +53,16 @@ function displayResults(items) {
     rootDiv.appendChild(videoDiv);
   });
 }
+
+const redditSearchURL = "https://www.reddit.com/search.json?q=dogs";
+
+fetch(redditSearchURL)
+  .then(function (response) {
+    // In order to use the data, it must first be parsed. Use .json() when the
+    // API response format is JSON.
+    return response.json();
+  })
+  .then(function (data) {
+    console.log('Fetch Response \n-------------');
+    console.log(data);
+  });
