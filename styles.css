@@ -1,0 +1,129 @@
+/**
+ * Body CSS
+ */
+ .hide {display:none;}
+ 
+ body {
+   height: 100%;
+   margin: 0;
+   padding: 20%; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+   background-color: rgba(228, 211, 194, 0.496) !important;
+
+}
+ 
+ h2 {
+  color: #ff4500 !important;;
+  font-family: 'Comic Neue', 'Comic Sans MS',  sans-serif;
+  font-weight:800;
+
+ }
+ /**
+  * Header CSS
+  */
+  header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 2;
+ }
+ 
+.mui-appbar {
+    background-color: #4db6ac !important;
+ }
+
+ .mui-appbar  .large-icon.material-icon {
+  display: inline-block; float: left;
+ }
+ .mui-appbar h1 {
+  display: inline-block; float: left;
+}
+
+ header ul.mui-list--inline {
+   margin-bottom: 0;
+ }
+ 
+ header a {
+   color: white;
+ }
+ 
+ header table {
+   width: 100%;
+ }
+ 
+ /**
+  * Content CSS
+  */
+ #content-wrapper {
+   min-height: 100%;
+   box-sizing: border-box;
+   margin-bottom: -100px;
+   padding-bottom: 100px;
+ }
+ 
+ /**
+  * Footer CSS
+  */
+footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      height:30px;
+      left: 0;
+      z-index: 2;
+      background-color: rgb(168, 150, 150);
+}
+ 
+ /**
+  * Landing Page CSS
+  */
+ .container {
+   text-align: center;
+ }
+ 
+ .search-input {
+   width: 300px;
+   padding: 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .checkbox-group {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px; /* Increases the space between the checkboxes and the button */
+ }
+ 
+ .checkbox-group label {
+   margin: 0 10px;
+ }
+
+ .large-icon.material-icon {
+  font-size: 4em;
+}
+.youtube-icon.material-icon {
+  color:red;
+  font-size: medium;
+}
+.reddit-icon.material-icon {
+  margin-right: 5px;
+  font-size: medium;
+  color:#ff4500;
+}
+ .material-icon {
+  margin-right: 5px;
+  font-size: medium;
+  color: white;
+}
+
+ .mui-btn {
+   margin-top: 30px; /* Add margin to the top of the button */
+   background-color:#ff4500 !important;
+ }
+ 
+ .mui-btn--primary {
+    background-color: #ff4500 !important;
+}
