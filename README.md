@@ -66,7 +66,7 @@ https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed
 
 ## Application Screenshot (placeholder: update before v1.0 deploy)
 
-![image](./assets/img/R.jpeg)
+![image](./assets/img/ZocialBlendR.jpeg)
 
 ## Source Code Repository
 
