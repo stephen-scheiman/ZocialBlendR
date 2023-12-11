@@ -74,7 +74,7 @@ https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed
 
 ## Application Screenshot (placeholder: update before v1.0 deploy)
 
-!alt[image]"./assets/..."
+![image](./assets/img/R.jpeg)
 
 ## Source Code Repository
 
