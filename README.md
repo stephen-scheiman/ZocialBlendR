@@ -28,11 +28,11 @@ Then the application should fetch and display popular Reddit posts related to th
 ## Technologies Used
 
 ```
-Google Slides
-VS Code, HTML
-CSS Library used: Material UI https://mui.com/
-API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
-API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
+-Google Slides
+-VS Code, HTML
+-CSS Library used: Material UI https://mui.com/
+-API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
+-API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
 ](https://www.youtube.com/yt/dev/api-resources.html)
 ```
 
@@ -47,23 +47,23 @@ Jonathan Campos: Quality Assurance Lead: Testing & User Feedback
 ## Challenges
 
 ```
-Initial group composition changed. 
-Level of Engagement/Participation varied from each member of the team. 
-Unexpected complexities with Material UI
-"Interesting" API documentation
+-Initial group composition changed. 
+-Level of Engagement/Participation varied from each member of the team. 
+-Unexpected complexities with Material UI
+-"Interesting" API documentation
 ```
 
 ## High Level Breakdown of Tasks
 
 ```
-Create main repository.
-Create project board.
-Import APIs
-Import CSS/Material UI.
-Delegate responsibilities to three team members.
-Create code
-Test code
-Document code
+-Create main repository.
+-Create project board.
+-Import APIs
+-Import CSS/Material UI.
+-Delegate responsibilities to three team members.
+-Create code
+-Test code
+-Document code
 ```
 
 ## Resources Links and Credits 
@@ -73,6 +73,10 @@ https://stackoverflow.com/questions/32523353/using-material-ui-in-html-developme
 
 https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response
 ```
+## Application Screenshot (placeholder: update before v1.0 deploy)
+
+!alt[image]"./assets/..."
+
 ## Source Code Repository
 
 https://github.com/stephen-scheiman/ZocialBlendR
