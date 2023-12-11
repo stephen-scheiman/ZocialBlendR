@@ -1,5 +1,7 @@
+$(document).ready(function(){
+  
+//Clicking the search button starts the action
 $("#searchButton").on("click", executeSearch);
-
 // Function to execute the search
 function executeSearch() {
   // Get the user input
@@ -80,3 +82,4 @@ function redditSearch(userInput) {
       }
     });
 }
+});
