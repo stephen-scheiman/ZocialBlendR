@@ -1,77 +1,62 @@
+# Project: ZocialBlendR
+
 # ZocialBlendR
 
-## Description 
+# Decription 
+- Social Media Aggregator. Based on User Preferences 
 
-A social media aggregator based on user preferences.  
+# User Story 
+As a user interested in diverse content from different platoforms, I want a website that can retrieve and display results from both Reddit and YouTube
+so that I can conveniently explore a variety of content in one place. There are options to filter results specifically for Reddit or YouTube should the user prefer to one platform. 
 
-## User Story
+# Acceptacance Criteria 
+As a user:
 
-As a user interested in diverse content,  
-I want to use a web application that aggregates content,   
-and that facilitates the exploration of interesting posts and videos.   
+1. When I visit the website, there should be a search bar prominently displayed on the homepage.
+2. I should be able to enter a search query into the search bar.
+3. After entering a search query, the website should display relevant results from both Reddit and YouTube on the same page.
+4. The website should provide a visually appealing and easy-to-navigate interface.
 
-## Acceptance Criteria
 
-Given a user on the application homepage,  
-When the user inputs their interests,  
-Then the application should fetch and  
-display popular Reddit posts related to the user's interests.  
-
-Given a user on the application homepage,  
-When the user inputs their interests,  
-Then the application should fetch and display  
-relevant YouTube videos matching the user's interests.  
-Given displayed content from both Reddit and YouTube,  
-When the user interacts with a post or video,  
-The user is taken to that post or video directly.  
-
-## Technologies Used
-
+# Technologies used: 
 - Google Slides
-- VS Code, HTML
-- CSS Library used: Material UI https://mui.com/
-- API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
-- API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
-](https://www.youtube.com/yt/dev/api-resources.html)
+- VS Code
+- HTML
+- CSS Library
+- Material UI 
+- API Reddit 
+- API YouTube
 
-## Breakdown of Tasks
+# Breakdown of Tasks: 
+Melissa Wright: Front End Lead: Working with Style and Landing Page
+Stephen Scheineman: Backend Lead: Working with API fetch/response
+Jonathan Campos: Quality Assurance Lead: Testing & User Feedback
 
-Melissa Wright: Front End Lead: Working with Style and Landing Page  
-Stephen Scheiman: Backend Lead: Working with API fetch/response  
-Jonathan Campos: Quality Assurance Lead: Testing & User Feedback  
+# Challenges
+Initial group composition changed. Level of Engagement/Participation varied from each member of the team. 
 
-## Challenges
+# Breakdown of Tasks: 
+Creating main repository.
+Creating project board.
+Importing APIs
+Importing CSS/Material UI.
+Delegate responsibilities to three team members.
+Relevant API usage for both Reddit and YouTube
 
-- Initial group composition changed. 
-- Level of Engagement/Participation varied from each member of the team. 
-- Unexpected complexities with Material UI
-- "Interesting" API documentation
+# Challenges
+- Initial group composition changed
+- Level of Engagement/Participation varied from each member of the team
 
-## High Level Breakdown of Tasks
+# Resources Links and Credits 
+Stackoverflow
+-https://stackoverflow.com/questions/32523353/using-material-ui-in-html-development#:~:text=you%20will%20need%20to%20add%20material.css%20and%20ripple.css,file%20for%20js%20file%20material.js%20material.min.js%20and%20ripples.min.js
+-https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response
 
-- Create main repository
-- Create project board
-- Import APIs
-- Import CSS/Material UI
-- Delegate responsibilities to three team members
-- Create code
-- Test code
-- Document code
+Material UI:
+-https://mui.com/
 
-## Resources Links and Credits 
+Reddit API:
+-https://www.reddit.com/dev/api
 
-https://stackoverflow.com/questions/32523353/using-material-ui-in-html-development#:~:text=you%20will%20need%20to%20add%20material.css%20and%20ripple.css,file%20for%20js%20file%20material.js%20material.min.js%20and%20ripples.min.js  
-
-https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response  
-
-## Application Screenshot (placeholder: update before v1.0 deploy)
-
-![image](./assets/img/ZocialBlendR.jpeg)
-
-## Source Code Repository
-
-https://github.com/stephen-scheiman/ZocialBlendR
-
-## Application Deployment Site
-
-https://stephen-scheiman.github.io/ZocialBlendR/
+YouTube API:
+-https://www.youtube.com/yt/dev/api-resources.html
