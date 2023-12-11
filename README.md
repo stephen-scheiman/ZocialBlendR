@@ -25,7 +25,6 @@ Given displayed content from both Reddit and YouTube,
 When the user interacts with a post or video,  
 The user is taken to that post or video directly.  
 
-
 ## Technologies Used
 
 - Google Slides
@@ -34,7 +33,6 @@ The user is taken to that post or video directly.
 - API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
 - API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
 ](https://www.youtube.com/yt/dev/api-resources.html)
-
 
 ## Breakdown of Tasks
 
