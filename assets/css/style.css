@@ -118,3 +118,7 @@ footer {
  .mui-btn--primary {
     background-color: #ff4500 !important;
 }
+
+a:hover {
+  cursor: pointer;
+}
