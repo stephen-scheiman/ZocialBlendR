@@ -1,13 +1,14 @@
 ## ZocialBlendR
 
 ## Description 
-
+```
 A social media aggregator based on user preferences
+```
 
 ## User Story
 ``` 
 As a user interested in diverse content.
-I want to use a web application that aggregates content 
+I want to use a web application that aggregates content, 
 and that facilitates the exploration of interesting posts and videos.
 ```
 
@@ -17,24 +18,23 @@ Given a user on the application homepage,
 When the user inputs their interests,
 Then the application should fetch and display popular Reddit posts related to the user's interests:
 
-- Given a user on the application homepage,
-- When the user inputs their interests,
-- Then the application should fetch and display relevant YouTube videos matching the user's interests.
-- Given displayed content from both Reddit and YouTube,
-- When the user interacts with a post or video,
-- The user is taken to that post or video directly.
+Given a user on the application homepage,
+When the user inputs their interests,
+Then the application should fetch and display relevant YouTube videos matching the user's interests.
+Given displayed content from both Reddit and YouTube,
+When the user interacts with a post or video,
+The user is taken to that post or video directly.
 ```
 
 ## Technologies Used
 
-```
 -Google Slides
 -VS Code, HTML
 -CSS Library used: Material UI https://mui.com/
 -API Reddit - [reddit API and Youtube API](https://www.reddit.com/dev/api)
 -API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
 ](https://www.youtube.com/yt/dev/api-resources.html)
-```
+
 
 ## Breakdown of Tasks
 
@@ -46,16 +46,14 @@ Jonathan Campos: Quality Assurance Lead: Testing & User Feedback
 
 ## Challenges
 
-```
 -Initial group composition changed. 
 -Level of Engagement/Participation varied from each member of the team. 
 -Unexpected complexities with Material UI
 -"Interesting" API documentation
-```
+
 
 ## High Level Breakdown of Tasks
 
-```
 -Create main repository.
 -Create project board.
 -Import APIs
@@ -64,7 +62,7 @@ Jonathan Campos: Quality Assurance Lead: Testing & User Feedback
 -Create code
 -Test code
 -Document code
-```
+
 
 ## Resources Links and Credits 
 
