@@ -118,3 +118,14 @@ footer {
  .mui-btn--primary {
     background-color: #ff4500 !important;
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  columns: 2;
+  text-decoration: none;
+  list-style: none;
+  text-align: start;
+}
