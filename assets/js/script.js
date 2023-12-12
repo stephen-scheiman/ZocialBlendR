@@ -1,13 +1,26 @@
 $(document).ready(function () {
+
+//jquery: new code for page and back button to search engine//
+  $("#btn_executesearch").click(function(){
+    executeSearch();
+  });
+  $("#btn_back").click(function(){
+    hideElement("#searchbox_results");
+    showElement("#searchbox");
+    
+  });
+
+
   //Clicking the search button starts the action
-  $("#searchButton").on("click", executeSearch);
+  //$("#searchButton").on("click", executeSearch);
   // Function to execute the search
   function executeSearch() {
     var rootDiv = document.getElementById("root");
     console.log(rootDiv);
     rootDiv.innerHTML = ""; // Clear previous results
     // Get the user input
-    var userInput = $('input[name="searchInput"]').val();
+    //var userInput = $('input[name="searchInput"]').val();
+    var userInput = document.getElementById("searchInput").val;
     // Get the state of the checkboxes
     var redditCheckbox = document.getElementById("redditCheckbox").checked;
     var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;

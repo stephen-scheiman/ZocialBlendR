@@ -13,7 +13,10 @@
    background-color: rgba(228, 211, 194, 0.496) !important;
 
 }
- 
+ h1 {
+  margin-left: 5px;
+ }
+
  h2 {
   color: #ff4500 !important;;
   font-family: 'Comic Neue', 'Comic Sans MS',  sans-serif;
