@@ -58,7 +58,7 @@ $(document).ready(function () {
     // rootDiv.innerHTML = ""; // Clear previous results
 
     items.forEach((item) => {
-      var videoDiv = document.createElement("tr");
+      var videoDiv = document.createElement("li");
       videoDiv.innerHTML = `
       <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
     `;
@@ -69,6 +69,7 @@ $(document).ready(function () {
   function redditSearch(userInput) {
     const redditSearchURL =
       "https://www.reddit.com/search.json?q=" + userInput + "&raw_json=1";
+      // "http://api.reddit.com/api/subreddits_by_topic.json?query=" + userInput + "&raw_json=1";
     fetch(redditSearchURL)
       .then(function (response) {
         //Parse the response
@@ -84,9 +85,8 @@ $(document).ready(function () {
   }
   function displayRedditResults(items) {
     var rootDiv = document.getElementById("root");
-    // rootDiv.innerHTML = ""; // Clear previous results
-    var redditDiv = document.createElement("tr");
-      redditDiv.innerHTML = `<a>https://reddit.com` + items + `</a>`;
+    var redditDiv = document.createElement("li");
+      redditDiv.innerHTML = `<a href=` + `https://www.reddit.com` + items + `>"https://reddit.com` + items + `"</a>`;
       rootDiv.appendChild(redditDiv);
     return
   }

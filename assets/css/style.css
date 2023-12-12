@@ -122,3 +122,10 @@ footer {
 a:hover {
   cursor: pointer;
 }
+
+ul {
+  columns: 2;
+  text-decoration: none;
+  list-style: none;
+  text-align: start;
+}
