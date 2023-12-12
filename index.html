@@ -12,7 +12,7 @@
   <!-- MUI JavaScript --> 
    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
    <!-- external stylesheet -->
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   <link rel="stylesheet" type="text/css" href="assets/styles.css">
    <!-- MUI CSS -->
    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
    <!-- Material Icons-->
@@ -27,29 +27,36 @@
   <header class="mui-appbar mui--z1">
     <!-- Appbar HTML -->
     <i class="material-icons material-icon large-icon">home</i>
+    <h1>ZocialBlendR</h1>
   </header>
 
   <div id="content-wrapper" class="mui--text-center">
     <div class="mui-panel">
       <div class="container">
-        <h2>Search By Your Interest </h2>
-        <input id="searchInput" name="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
-        <div class="checkbox-group">
-          <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
-          <i class="material-icons material-icon reddit-icon">reddit</i>
+        <div id="searchbox">
+          <h2>Search By Your Interest </h2>
+          <input id="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
+            <i class="material-icons material-icon reddit-icon">reddit</i>
 
-          <label><input type="checkbox" id="youtubeCheckbox"> YouTube</label>
-          <i class="material-icons material-icon youtube-icon">smart_display</i>
+            <label><input type="checkbox" id="youtubeCheckbox"> YouTube</label>
+            <i class="material-icons material-icon youtube-icon">smart_display</i>
 
-          <label><input type="checkbox" id="bothCheckbox"> Both</label>
-          <i class="material-icons material-icon reddit-icon">reddit</i><i class="material-icons material-icon youtube-icon">smart_display</i>
+            <label><input type="checkbox" id="bothCheckbox"> Both</label>
+            <i class="material-icons material-icon reddit-icon">reddit</i><i class="material-icons material-icon youtube-icon">smart_display</i>
+          </div>
+          <button id="btn_executesearch" class="mui-btn mui-btn--primary mui-btn--raised">Search</button>
+          <!--<button class="mui-btn mui-btn--primary mui-btn--raised" onclick="executeSearch()">Search</button>-->
         </div>
-        <button class="mui-btn mui-btn--primary mui-btn--raised" id="searchButton">Search</button>
       </div>
-      <ul id="root"></ul>
+      <div id="searchbox_results" class="hide">
+        <button id="btn_back">Back</button>
+        <div id="root"></div>
+      </div>
       <!-- jquery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="./assets/js/script.js"></script>
+      <script src="assets/js/script.js"></script>
     </div>
   </div>
   <footer>
