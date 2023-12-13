@@ -1,26 +1,14 @@
 $(document).ready(function () {
 
-//jquery: new code for page and back button to search engine//
-  // $("#btn_executesearch").click(function(){
-  //   executeSearch();
-  // });
-  // $("#btn_back").click(function(){
-  //   hideElement("#searchbox_results");
-  //   showElement("#searchbox");
-    
-  // });
-
 
   //Clicking the search button starts the action
   $("#searchButton").on("click", executeSearch);
   // Function to execute the search
   function executeSearch() {
     var rootDiv = document.getElementById("root");
-    console.log(rootDiv);
     rootDiv.innerHTML = ""; // Clear previous results
     // Get the user input
     var userInput = $('input[name="searchInput"]').val();
-    // var userInput = document.getElementById("searchInput").val;
     // Get the state of the checkboxes
     var redditCheckbox = document.getElementById("redditCheckbox").checked;
     var youtubeCheckbox = document.getElementById("youtubeCheckbox").checked;
@@ -68,8 +56,6 @@ $(document).ready(function () {
   // Function to display search results
   function displayResults(items) {
     var rootDiv = document.getElementById("root");
-    // rootDiv.innerHTML = ""; // Clear previous results
-
     items.forEach((item) => {
       var videoDiv = document.createElement("li");
       videoDiv.innerHTML = `
@@ -82,25 +68,34 @@ $(document).ready(function () {
   function redditSearch(userInput) {
     const redditSearchURL =
       "https://www.reddit.com/search.json?q=" + userInput + "&raw_json=1";
-      // "http://api.reddit.com/api/subreddits_by_topic.json?query=" + userInput + "&raw_json=1";
     fetch(redditSearchURL)
       .then(function (response) {
         //Parse the response
         return response.json();
       })
       .then(function (data) {
-        //Write the top 25 results to the console for now
-        console.log("Fetch Response \n-------------");
+    //Display the top 25 results via the displayRedditResults function
         for (i = 0; i <= 24; i++) {
-          displayRedditResults(data.data.children[i].data.permalink);
+          displayRedditResults(
+            data.data.children[i].data.url,
+            data.data.children[i].data.subreddit,
+            data.data.children[i].data.title
+          );
         }
       });
   }
-  function displayRedditResults(items) {
+  // Format and display the params passed by redditSearch()
+  function displayRedditResults(url, subReddit, title) {
     var rootDiv = document.getElementById("root");
     var redditDiv = document.createElement("li");
-      redditDiv.innerHTML = `<a href=` + `https://www.reddit.com` + items + `>"https://reddit.com` + items + `"</a>`;
-      rootDiv.appendChild(redditDiv);
-    return
+        redditDiv.innerHTML =
+          `<a href=` +
+          url +
+          `><span id=sub>Subreddit: </span>` +
+          subReddit +
+          `<span id=title> Title: </span>` +
+          title +
+          `</a>`;
+    rootDiv.appendChild(redditDiv);
   }
 });

@@ -131,4 +131,19 @@ ul {
   text-decoration: none;
   list-style: none;
   text-align: start;
+  padding: 0;
+}
+
+li {
+  font-style: oblique;
+}
+
+#sub{
+  font-weight: bold;
+  font-size: larger;
+}
+
+#title{
+  font-weight: bold;
+  font-size: larger;
 }
