@@ -79,18 +79,22 @@ $(document).ready(function () {
           displayRedditResults(
             data.data.children[i].data.url,
             data.data.children[i].data.subreddit,
-            data.data.children[i].data.title
+            data.data.children[i].data.title,
+            data.data.children[i].data.thumbnail
           );
         }
       });
   }
   // Format and display the params passed by redditSearch()
-  function displayRedditResults(url, subReddit, title) {
+  function displayRedditResults(url, subReddit, title, thumbnail) {
     var rootDiv = document.getElementById("root");
     var redditDiv = document.createElement("li");
+    console.log(thumbnail);
         redditDiv.innerHTML =
           `<a href=` +
           url +
+          `><img src=` +
+          thumbnail +
           `><span id=sub>Subreddit: </span>` +
           subReddit +
           `<span id=title> Title: </span>` +
