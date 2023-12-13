@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   //Clicking the search button starts the action
   $("#searchButton").on("click", executeSearch);
   // Function to execute the search
@@ -53,13 +51,13 @@ $(document).ready(function () {
       });
   }
 
-  // Function to display search results
+ // Function to display search results
   function displayResults(items) {
     var rootDiv = document.getElementById("root");
     items.forEach((item) => {
       var videoDiv = document.createElement("li");
       videoDiv.innerHTML = `
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="280" height="157" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
     `;
       rootDiv.appendChild(videoDiv);
     });
@@ -74,14 +72,17 @@ $(document).ready(function () {
         return response.json();
       })
       .then(function (data) {
-    //Display the top 25 results via the displayRedditResults function
+        //Display the top 25 results via the displayRedditResults function
         for (i = 0; i <= 24; i++) {
-          displayRedditResults(
-            data.data.children[i].data.url,
-            data.data.children[i].data.subreddit,
-            data.data.children[i].data.title,
-            data.data.children[i].data.thumbnail
-          );
+          //Make sure the result has a thumbnail, otherwise discard
+          if (data.data.children[i].data.thumbnail.includes("http")) {
+            displayRedditResults(
+              data.data.children[i].data.url,
+              data.data.children[i].data.subreddit,
+              data.data.children[i].data.title.slice(0, 100),
+              data.data.children[i].data.thumbnail
+            );
+          }
         }
       });
   }
@@ -90,16 +91,16 @@ $(document).ready(function () {
     var rootDiv = document.getElementById("root");
     var redditDiv = document.createElement("li");
     console.log(thumbnail);
-        redditDiv.innerHTML =
-          `<a href=` +
-          url +
-          `><img src=` +
-          thumbnail +
-          `><span id=sub>Subreddit: </span>` +
-          subReddit +
-          `<span id=title> Title: </span>` +
-          title +
-          `</a>`;
+    redditDiv.innerHTML =
+      `<a href=` +
+      url +
+      `><img src=` +
+      thumbnail +
+      `><span id=sub>Subreddit: </span>` +
+      subReddit +
+      `<span id=title><br>Title: </span>` +
+      title +
+      `...</a>`;
     rootDiv.appendChild(redditDiv);
   }
 });

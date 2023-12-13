@@ -128,25 +128,27 @@ a:hover {
 
 ul {
   columns: 2;
-  text-decoration: none;
   list-style: none;
   text-align: start;
   padding: 0;
+  display: list-item;
 }
 
 li {
   font-style: oblique;
-  display: flex;
-  text-align:left;
 }
 
 #sub {
   font-weight: bold;
   font-size: larger;
-  position: relative;
 }
 
 #title {
   font-weight: bold;
   font-size: larger;
+  text-wrap: wrap;
+}
+
+img {
+  display: list-item;
 }
