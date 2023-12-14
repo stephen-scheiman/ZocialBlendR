@@ -7,7 +7,6 @@ body {
   margin: 0;
   padding: 20%;
   display: flex;
-  align-items: center;
   justify-content: center;
   font-family: "Comic Neue", "Comic Sans MS", sans-serif;
   background-color: rgba(228, 211, 194, 0.496) !important;
@@ -32,6 +31,7 @@ header {
   z-index: 2;
   display: flex;
   align-items: center;
+  flex-shrink: initial;
 }
 
 .mui-appbar {
@@ -55,8 +55,10 @@ header table {
 #content-wrapper {
   min-height: 100%;
   box-sizing: border-box;
-  margin-bottom: -100px;
-  padding-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 /**
