@@ -73,7 +73,8 @@ $(document).ready(function () {
       })
       .then(function (data) {
         //Display the top 25 results via the displayRedditResults function
-        for (i = 0; i <= 24; i++) {
+        var count = 20;
+        for (i = 0; i <= count; i++) {
           //Make sure the result has a thumbnail, otherwise discard
           if (data.data.children[i].data.thumbnail.includes("http")) {
             displayRedditResults(
@@ -82,6 +83,8 @@ $(document).ready(function () {
               data.data.children[i].data.title.slice(0, 100),
               data.data.children[i].data.thumbnail
             );
+          } else {
+            count++;
           }
         }
       });
