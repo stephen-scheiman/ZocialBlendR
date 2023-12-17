@@ -1,9 +1,8 @@
 $(document).ready(function () {
   //Clicking the search button starts the action
   $("#searchButton").on("click", executeSearch);
-  // Function to execute the search
 
-  // Get the modal
+  // Get the modal - modal code borrowed from W3Schools example code
   var modal = document.getElementById("myModal");
 
   // Get the <span> element that closes the modal
@@ -20,7 +19,8 @@ $(document).ready(function () {
       modal.style.display = "none";
     }
   };
-
+  
+  // Function to execute the search
   function executeSearch() {
     var rootDiv = document.getElementById("root");
     rootDiv.innerHTML = ""; // Clear previous results
