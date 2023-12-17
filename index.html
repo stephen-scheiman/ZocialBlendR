@@ -1,63 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="icon" type="image/gif" href="assets/favicon/" />
+    <title>ZocialBlendR</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="favicon/favicon.ico">
-  <link rel="icon" type="image/gif" href="assets/favicon/">
-  <title>ZocialBlendR</title>
+    <!-- MUI JavaScript -->
+    <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- MUI CSS -->
+    <link
+      href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Material Icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+    />
+  </head>
 
-  <!-- MUI JavaScript --> 
-   <script src="https://cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
-   <!-- external stylesheet -->
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   <!-- MUI CSS -->
-   <link href="https://cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-   <!-- Material Icons-->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <!-- Google Fonts -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
-   
-</head>
+  <body>
+    <main>
+      <header class="mui-appbar mui--z1">
+        <img src="./assets/img/ZocialBlendR.jpeg" alt="ZocialBlendR Blender" />
+        <!-- Appbar HTML -->
+        <h1>ZocialBlendR</h1>
+      </header>
 
-<body>
-  <main>
-  <header class="mui-appbar mui--z1">
-    <img src="./assets/img/ZocialBlendR.jpeg" alt="ZocialBlendR Blender">
-    <!-- Appbar HTML -->
-   <h1>ZocialBlendR</h1>
-  </header>
+      <div id="content-wrapper" class="mui--text-center">
+        <div class="mui-panel">
+          <div class="container">
+            <h2>Search By Your Interest</h2>
+            <input
+              id="searchInput"
+              name="searchInput"
+              class="search-input"
+              type="text"
+              placeholder="Enter your search phrase"
+            />
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" id="redditCheckbox" /> Reddit</label
+              >
+              <i class="material-icons material-icon reddit-icon">reddit</i>
 
-  <div id="content-wrapper" class="mui--text-center">
-    <div class="mui-panel">
-      <div class="container">
-        <h2>Search By Your Interest </h2>
-        <input id="searchInput" name="searchInput" class="search-input" type="text" placeholder="Enter your search phrase">
-        <div class="checkbox-group">
-          <label><input type="checkbox" id="redditCheckbox"> Reddit</label>
-          <i class="material-icons material-icon reddit-icon">reddit</i>
+              <label
+                ><input type="checkbox" id="youtubeCheckbox" /> YouTube</label
+              >
+              <i class="material-icons material-icon youtube-icon"
+                >smart_display</i
+              >
 
-          <label><input type="checkbox" id="youtubeCheckbox"> YouTube</label>
-          <i class="material-icons material-icon youtube-icon">smart_display</i>
-
-          <label><input type="checkbox" id="bothCheckbox"> Both</label>
-          <i class="material-icons material-icon reddit-icon">reddit</i><i class="material-icons material-icon youtube-icon">smart_display</i>
+              <label><input type="checkbox" id="bothCheckbox" /> Both</label>
+              <i class="material-icons material-icon reddit-icon">reddit</i
+              ><i class="material-icons material-icon youtube-icon"
+                >smart_display</i
+              >
+            </div>
+            <button
+              class="mui-btn mui-btn--primary mui-btn--raised"
+              id="searchButton"
+            >
+              Search
+            </button>
+          </div>
+          <ul id="root"></ul>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Please select ONE of the three search options</p>
+            </div>
+          </div>
+          <!-- jquery -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="./assets/js/script.js"></script>
         </div>
-        <button class="mui-btn mui-btn--primary mui-btn--raised" id="searchButton">Search</button>
       </div>
-      <ul id="root"></ul>
-      <!-- jquery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="./assets/js/script.js"></script>
-    </div>
-  </div>
-  <footer>
-    <div class="footer mui-container mui--text-center">
-      Made with ♥ by Stephen S., Melissa W., Jonathan C. using <a href="https://www.muicss.com">MUICSS</a>
-    </div>
-  </footer>
-</main>
-</body>
+
+      <footer>
+        <div class="footer mui-container mui--text-center">
+          Made with ♥ by Stephen S., Melissa W., Jonathan C. using
+          <a href="https://www.muicss.com">MUICSS</a>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
