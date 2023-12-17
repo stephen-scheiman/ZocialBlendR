@@ -2,6 +2,25 @@ $(document).ready(function () {
   //Clicking the search button starts the action
   $("#searchButton").on("click", executeSearch);
   // Function to execute the search
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
   function executeSearch() {
     var rootDiv = document.getElementById("root");
     rootDiv.innerHTML = ""; // Clear previous results
@@ -28,7 +47,8 @@ $(document).ready(function () {
       $('input[name="searchInput"]').val("");
     } else {
       //C'mon man.
-      alert("Pick one, don't be difficult");
+      //alert("Pick one, don't be difficult");
+      modal.style.display = "block";
       $('input[name="searchInput"]').val("");
     }
   }
@@ -51,7 +71,7 @@ $(document).ready(function () {
       });
   }
 
- // Function to display search results
+  // Function to display search results
   function displayResults(items) {
     var rootDiv = document.getElementById("root");
     items.forEach((item) => {
