@@ -64,9 +64,9 @@ https://stackoverflow.com/questions/32523353/using-material-ui-in-html-developme
 
 https://stackoverflow.com/questions/31075893/how-to-fix-favicon-ico-error-failed-to-load-resource-neterr-empty-response  
 
-## Application Screenshot (placeholder: update before v1.0 deploy)
+## Application Screenshot
 
-![image](./assets/img/ZocialBlendR.jpeg)
+![image](./assets/img/demo_gif.gif)
 
 ## Source Code Repository
 
