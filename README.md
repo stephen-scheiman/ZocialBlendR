@@ -34,7 +34,7 @@ The user is taken to that post or video directly.
 - API YouTube - [https://www.youtube.com/yt/dev/api-resources.html
 ](https://www.youtube.com/yt/dev/api-resources.html)
 
-## Breakdown of Tasks
+## Roles and Responsibilities
 
 Melissa Wright: Front End Lead: Working with Style and Landing Page  
 Stephen Scheiman: Backend Lead: Working with API fetch/response  
